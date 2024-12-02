@@ -1,0 +1,396 @@
+header {
+    position: relative;
+    background-color: #1e1e1e; /* Dark background for visibility */
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/black-linen.png') repeat;
+    opacity: 0.7;
+    z-index: -1;
+  }
+  
+  .stars::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 1px, transparent 1px) 0 0;
+    background-size: 20px 20px;
+    animation: twinkle 3s infinite;
+  }
+  
+  @keyframes twinkle {
+    0% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0.7;
+    }
+  }
+  
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #007acc; /* Dark blue */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img {
+    height: 70px;
+    width: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #005f99;
+    border-radius: 5px;
+}
+
+/* Carousel Section */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6f7ff;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.carousel-caption {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 600px;
+}
+
+.carousel-caption h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.carousel-caption p {
+    font-size: 1.2em;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: #4da6ff;
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.hero .btn, .hero .btn-secondary {
+    display: inline-block;
+    margin: 10px 10px 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.hero .btn {
+    background-color: #ff6666;
+    color: white;
+}
+
+.hero .btn:hover {
+    background-color: #cc0000;
+}
+
+.hero .btn-secondary {
+    background-color: white;
+    color: #007acc;
+    border: 2px solid #007acc;
+}
+
+.hero .btn-secondary:hover {
+    background-color: #e6f7ff;
+    color: #005f99;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px;
+    background-color: #f2f2f2;
+}
+
+.service {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service p {
+    margin-bottom: 15px;
+}
+
+.service .btn {
+    background-color: #007acc;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.service .btn:hover {
+    background-color: #005f99;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Dark background for contrast */
+    color: white;
+    padding: 30px 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    border-bottom: 2px solid #4da6ff;
+    padding-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95em;
+}
+
+.footer-section ul li a:hover {
+    color: #4da6ff; /* Light blue accent */
+}
+
+.footer-section ul li img {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+footer .footer-copyright {
+    margin-top: 20px;
+    font-size: 0.85em;
+    color: #aaa;
+}
+/* Chat Box */
+button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745; /* Green color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+#chat-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    border-radius: 10px;
+    z-index: 1000;
+    padding-top: 30px; /* Add top padding for the close button */
+}
+
+/* Close Button for Chat Popup */
+.close-btn {
+    position: absolute;
+    top: 5px; /* Adjusted for better visibility */
+    right: 5px; /* Adjusted for better visibility */
+    background-color: red; /* Red background */
+    color: white; /* White 'X' */
+    border: none;
+    width: 30px; /* Size of the button */
+    height: 30px; /* Size of the button */
+    border-radius: 50%; /* Circle shape */
+    font-size: 1.5em; /* Size of the 'X' */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2; /* Ensures the button is above other elements */
+}
+
+.close-btn:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+
+
+
+.chat-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px; /* Ensure the form doesn't overlap with the button */
+}
+
+.chat-form input,
+.chat-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.chat-form textarea {
+    resize: none;
+}
+
+.envoyer-btn {
+    width: 150px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center; /* Center the button */
+}
+
+.envoyer-btn:hover {
+    background-color: #0056b3;
+}
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensibilisation aux Dangers de la Drogue</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="stars"></div>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo de l'association">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li> <!-- Main Page Link -->
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#dangers">Dangers des Drogues</a></li>
+                <li><a href="#actualites">Actualités</a></li>
+                <li><a href="contact.html">Contact</a></li> <!-- Updated link -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carousel Section -->
+    <section class="carousel">
+        <div class="carousel-slide active">
+            <img src="images/image.jpg" alt="Homme réfléchissant à la vie">
+            <div class="carousel-caption">
+                <h2>
+                    <span style="color: red;">Voie d'Aide</span> Association
+                </h2>
+                <p>
+                    Nous espérons que cette association pourra transformer des vies à l'avenir et conduire à un monde meilleur et une société plus juste.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <main>
+        <!-- Section principale (Hero) -->
+        <section class="hero">
+            <h1>Sensibilisation aux dangers de la drogue</h1>
+            <p>Votre sécurité est notre priorité. Ensemble, nous luttons contre l’addiction.</p>
+            <a href="#dangers" class="btn">Commencer</a>
+            <a href="#temoignages" class="btn-secondary">Voir les Témoignages</a>
+        </section>
+
+        <!-- Services (3 blocs) -->
+        <section class="services">
+            <div class="service">
+                <h3>Éducation sur les Drogues</h3>
+                <p>Informez-vous sur les effets nocifs des drogues.</p>
+                <a href="#education" class="btn">En savoir plus</a>
+            </div>
+            <div class="service">
+                <h3>Soutien Psychologique</h3>
+                <p>Accédez à des ressources pour accompagner les personnes en difficulté.</p>
+                <a href="#soutien" class="btn">En savoir plus</a>
+            </div>
+            <div class="service">
+                <h3>Programmes de Réhabilitation</h3>
+                <p>Découvrez des centres spécialisés pour lutter contre la dépendance.</p>
+                <a href="#rehabilitation" class="btn">En savoir plus</a>
+            </div>
+        </section>
+
+        <!-- À Propos Section -->
+        <section id="about" class="about">
+            <h2>Qui sommes-nous ?</h2>
+            <p>Nous sommes une association dédiée à sensibiliser le public aux dangers des drogues et de l’addiction. Notre mission est d’éduquer, prévenir, et soutenir les personnes touchées par ce fléau.</p>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>À Propos</h4>
+                <ul>
+                    <li><a href="#about">À propos de nous</a></li>
+                    <li><a href="#mission">Notre Mission</a></li>
+                    <li><a href="team.html">Équipe</a></li>
+                    <li><a href="#history">Histoire</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="#education">Ressources éducatives</a></li>
+                    <li><a href="#articles">Articles</a></li>
+                    <li><a href="#events">Événements</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Restez Connecté</h4>
+                <ul>
+                    <li><a href="mailto:voiedaide0@gmail.com"><img src="images/gmail.png" alt="Gmail Icon"> voiedaide0@gmail.com</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61569230529310" target="_blank"><img src="images/facebook.png" alt="Facebook Icon"> Voie D'aide</a></li>
+                    <li><a href="https://www.instagram.com/voie_daide/"><img src="images/Instagram.png" alt="Instagram Icon"> @Voie_daide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contactez-nous</h4>
+                <ul>
+                    <li><a href="tel:+216 70 233 344">+216 70 223 344</a></li>
+                    <li><a href="contact.html">Formulaire de Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copyright">Tous droits réservés © 2024</p>
+    </footer>
+
+    <!-- Chat Box -->
+    <button onclick="toggleChatPopup()">Laissez-nous un message</button>
+
+    <div id="chat-popup">
+        <button class="close-btn" onclick="toggleChatPopup()">×</button> <!-- Close button -->
+        <h2>Laissez-nous un message</h2>
+        <p class="chat-message">Nous sommes là pour vous aider. Laissez-nous un message ci-dessous.</p>
+        <form class="chat-form">
+            <input type="text" id="username" placeholder="Votre nom" required>
+            <input type="email" id="email" placeholder="Votre email" required>
+            <textarea id="message" placeholder="Votre message" rows="4" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+    
+
+
+    <script>
+        function toggleChatPopup() {
+            var popup = document.getElementById('chat-popup');
+            if (popup.style.display === 'none' || popup.style.display === '') {
+                popup.style.display = 'block';
+            } else {
+                popup.style.display = 'none';
+            }
+        }
+
+        // Prevent form submission and handle it
+        function submitChatForm(event) {
+            event.preventDefault();
+            var name = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            alert(`Message reçu de ${name} (${email}): ${message}`);
+            // Here you can handle the message submission logic
+        }
+    </script>
+    
+</body>
+</html>
